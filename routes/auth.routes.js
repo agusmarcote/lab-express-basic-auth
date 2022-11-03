@@ -115,6 +115,14 @@ router.get('/profile', isLoggedIn, (req, res) => {
     res.render('users/user-profile',  req.session.currentUser)
 }) 
 
+router.get("/main", isLoggedIn , (req, res) => {
+    res.render("users/main", req.session.currentUser)
+})
+
+router.get("/private", isLoggedIn , (req, res) => {
+    res.render("users/private"), req.session.currentUser
+})
+
 
 
 
